@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Login & Signup Form</title>
+    <link rel="stylesheet" href="studcss.css" />
+    <script src="homejs.js"></script>
+
+  </head>
+  <body>
+
+
+
+  
+
+
+    <div class="nav">
+      <a href="home.htm"><img src="logo01.jpg" alt="logo" class="logo"></a>
+    <nav class="navbar">
+      <ul>
+        <li><a href="home.htm">Home</a></li>
+        <li class="dropdown">
+          <a href="#" onclick="toggleDropdown()">Log In &#9660;</a>
+          <div class="dropdown-content" id="dropdownContent">
+            <a href="stud.htm">Student LogIn</a>
+            <a href="tlogin.htm">Teacher LogIn</a>
+          </div>
+        </li>
+        <li><a href="about.htm">About</a></li>
+        <li><a href="contact.htm">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+    
+    <section class="wrapper">
+      <div class="form signup">
+        <header>Signup</header>
+        <form action="studlogin.php" method="post">
+          <input type="text" placeholder="Full name" required />
+          <input type="text" placeholder="Email address" required />
+          <input type="password" placeholder="Password" required />
+          <div class="checkbox">
+            <input type="checkbox" id="signupCheck" />
+            <label for="signupCheck">I accept all terms & conditions</label>
+          </div>
+          <input type="submit" value="Signup" />
+        </form>
+      </div>
+
+      <div class="form login">
+        <header>Login</header>
+        <form action="studlogin.php" method="post">
+          <input type="text" placeholder="Email address" required />
+          <input type="password" placeholder="Password" required />
+          <a href="#">Forgot password?</a>
+          <input type="submit" value="Login" />
+        </form>
+      </div>
+
+      <script>
+        const wrapper = document.querySelector(".wrapper"),
+          signupHeader = document.querySelector(".signup header"),
+          loginHeader = document.querySelector(".login header");
+
+        loginHeader.addEventListener("click", () => {
+          wrapper.classList.add("active");
+        });
+        signupHeader.addEventListener("click", () => {
+          wrapper.classList.remove("active");
+        });
+      </script>
+    </section>
+  </body>
+</html>
