@@ -148,31 +148,7 @@ form
   accent-color: #fff;
   cursor: pointer;
 }
-form
-  .checkbox
-  label {
-  cursor: pointer;
-  color: #fff;
-}
-form a {
-  color: #333;
-  text-decoration: none;
-}
-form
-  a:hover {
-  text-decoration: underline;
-}
-form
-  input[type="submit"] {
-  margin-top: 15px;
-  padding: none;
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
-}
-.form.login
-  input[type="submit"] {
-  background: orange;
-  color: #fff;
-  border: none;
+
+#forget {
+  color: white;
 }
